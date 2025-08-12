@@ -1,17 +1,14 @@
-import re
+from decimal import Decimal
 
 import pytest
-from selenium.common import NoSuchElementException, StaleElementReferenceException
+from selenium.webdriver import Firefox
 from selenium.webdriver.common.by import By
+from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.remote.webdriver import WebDriver
-from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.remote.webelement import WebElement
-from selenium.webdriver import Firefox, ActionChains
-from selenium.webdriver.support.wait import WebDriverWait
-from decimal import Decimal
 from selenium.webdriver.support import expected_conditions as EC
-
+from selenium.webdriver.support.wait import WebDriverWait
 
 MENU_URL = "https://coffee-cart.app/"
 CART_URL = "https://coffee-cart.app/cart"
